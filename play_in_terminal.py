@@ -25,6 +25,11 @@ def play_in_terminal():
         while time.time() < lastFrame + 1 / 30:
             continue
         lastFrame = lastFrame + 1 / 30
-        os.system("clear")
+        if sys.platform=="linux":
+            os.system("clear")
+        if sys.platform=="sys.platform":
+            os.system("clear")
+        if sys.platform=="win32":
+            os.system("cls")
 if __name__=="__main__":
     play_in_terminal()
